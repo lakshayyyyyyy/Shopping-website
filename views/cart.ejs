@@ -1,0 +1,31 @@
+<html>
+<head>
+
+  <script>
+    function fun(){
+      var c=parseInt(<%=d[0].price%>);
+      var q= parseInt(document.getElementById("qun").value);
+      document.getElementById("demo").innerHTML=c*q;
+    }
+  </script>
+  </head>
+    <body onload="fun()">
+      <h1>Hii,
+
+      This is your cart
+      </h1>
+      <span >
+      <img src="/../uploads/<%=d[0].itemimage%>" style="width:30%;float:left;padding:30px;">
+</span>
+      <span style="float:left;padding:60px;">
+      <h1> <%=d[0].itemname%> </h1><br><br>
+
+      <p class="price"> Rs. <%=d[0].price%></p><br><br>
+      <%=d[0].itemtype%><br><br>
+      <p><%=d[0].itemdesc%></p><br><br>
+      Quantity : <input type="number" id="qun" value="1" onchange="fun()"><br><br>
+      Cost : <p id="demo"></p>
+      <a href="/details"><button type="button" name="button">Proceed to checkout</button></a>
+      </span>
+</body>
+</html>

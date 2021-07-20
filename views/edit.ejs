@@ -1,0 +1,11 @@
+<form action="/save" method="post" enctype=multipart/form-data>
+USERNAME : <input type="text" name="uname" value="<%=data1[0].username%>" disabled><br><br>
+GENDER : <INPUT type="text" name="gender" value="<%=data1[0].gender%>" required> <br><br>
+EMAIL ID : <INPUT  type ="email" name="email" value="<%=data1[0].emailid%>" required><br><br>
+MOBILE NO. : <INPUT TYPE="NUMBER" name="mobile" minlength="10" maxlength="12" value="<%=data1[0].mobileno%>" required>
+ADDRESS : <INPUT  type ="TEXT" name="address" value="<%=data1[0].address%>" required><br><br>
+CITY :<INPUT  type ="text" name="city" value="<%=data1[0].city%>" required><br><br>
+PASSWORD : <input type="text" name="pass" value="<%=data1[0].password%>" required><br><br>
+CHOOSE YOUR PROFILE : <INPUT TYPE="file" name="file" value="<%=data1[0].imagename%>" > <br><br><br><br>
+<INPUT TYPE="SUBMIT"  value="SAVE">
+</form>

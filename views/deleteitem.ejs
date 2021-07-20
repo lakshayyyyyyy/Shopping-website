@@ -1,0 +1,31 @@
+<table >
+<tr>
+<th>itemid</th>
+<th>Image<th>
+<th>itemname</th>
+<th>itemdesc</th>
+<th>itemtype</th>
+<th>Type Desciption</th>
+<th>price</th>
+<th>delete item</th>
+</tr>
+<%if(rows.length) {
+  for(var i=0;i<rows.length;i++){%>
+<tr>
+  <td><%=rows[i].itemid%></td>
+  <td><img src="/../uploads/<%=rows[i].itemimage%>" width=100px height=100px></td>
+  <td><%=rows[i].itemname%></td>
+  <td><%=rows[i].itemdesc%></td>
+  <td><%=rows[i].itemtype%></td>
+  <td><%=rows[i].typedesc%></td>
+  <td><%=rows[i].price%></td>
+  <td><a href="/delete/<%=rows[i].itemid%>">delete</a></td>
+</tr>
+<%}
+}
+else{%>
+<tr>
+<td colspan="8"> No item found</td>
+</tr>
+<%}%>
+</table>

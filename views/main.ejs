@@ -1,0 +1,65 @@
+<head>
+  <style>
+    .topnav {
+  background-color: #1B264A;
+  overflow: hidden;
+  height: 50px;
+}
+
+.topnav a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #000000;
+  color: white;
+  float:left;
+}
+.card{
+  max-height:768px;
+  min-height:768px;
+
+    </style>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+      <div class="topnav">
+  <a class="active" href="#">Home</a>
+  <img src="/../uploads/user.png" alt="img" href="#" height="50px" style="float:right">
+  <a href="/cart" style="float:right">Cart</a>
+  <a href="/register" style="float:right">SignUp</a>
+  <a href="/login" style="float:right">Login</a>
+</div>
+<br><br><br>
+<div class="row">
+<%if(abc) {
+    for(var i=0;i<abc.length;i++){%>
+      <div class="col-md-3">
+      <div class="card" >
+  <img class="card-img-top" src="/../uploads/<%=abc[i].itemimage%>" style="width:100%"">
+  <div class="card-body">
+  <h2 class="card-title"> <%=abc[i].itemname%> </h2>
+  <p class="card-text" style="color: grey;"> Rs. <%=abc[i].price%></p>
+  <p class="card-text"><%=abc[i].itemtype%></p>
+  <p class="card-text"><%=abc[i].itemdesc%></p>
+  <a href="/cart/<%=abc[i].itemid%>"><button class="btn btn-primary">Add to Cart</button></a>
+  </div>
+</div>
+</div>
+  <%}
+}%>
+</div>
+</body>
+</html>

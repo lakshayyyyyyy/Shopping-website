@@ -1,0 +1,22 @@
+<form action="/newitem" method="post" enctype=multipart/form-data>
+Item Id : <input type=text name="itemid" required><br><br>
+Item Name : <input type="text" name="itemname" required><br><br>
+Item Description : <br><textarea name="description" rows="5" cols="40" required></textarea><br><br>
+Item Type : <select class="s" name="type" required>
+  <option><option>
+<option>Mobiles,computers<option>
+  <option>Electronics<option>
+    <option>Men's fashion<option>
+      <option>Women's fashion<option>
+        <option>Home,kitchen<option>
+          <option>beauty,Healty,Grocery<option>
+            <option>Sprots,Fitness<option>
+              <option>Baby products<option>
+                <option>Bags,Luggage<option>
+</select><br><br>
+Item Type Description : <input type="text" name="typedes" ><br><br>
+Item Price : <input type="text" name="price" placeholder="Enter price in Rs." required><br><br>
+Item Image : <input type="file" name="file" ><br><br>
+<br>
+<input type ="submit" value="ADD ITEM">
+</form>
